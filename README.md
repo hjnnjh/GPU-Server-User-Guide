@@ -7,7 +7,7 @@
 在校园网或者webvpn环境下，在终端中使用以下命令登陆虚拟机。
 
 ```sh
-$ ssh ubuntu@202.117.45.239 -p <port>
+ ssh ubuntu@202.117.45.239 -p <port>
 ```
 
 `<port>`为端口号，由管理员发送给使用者，登陆密码为：`test`。
@@ -15,15 +15,15 @@ $ ssh ubuntu@202.117.45.239 -p <port>
 每个虚拟机有两个账户：`root`和`ubuntu`，通过命令：
 
 ```sh
-$ su ubuntu
-$ su
+ su ubuntu
+ su
 ```
 
 可在两个账户之间互相切换。通过命令：
 
 ```sh
-$ passwd root
-$ passwd ubuntu
+ passwd root
+ passwd ubuntu
 ```
 
 可自行修改两个账户的密码（同时也是登陆密码），并且也可以自行配置SSH密钥登陆。
@@ -74,13 +74,13 @@ Vscode Remote SSH可以实现在服务器上写代码像在本地环境中写代
 查看显卡信息和占用情况：
 
 ```sh
-$ nvidia-smi
+ nvidia-smi
 ```
 
 实时查看显卡运行情况（0.1秒间隔刷新）：
 
 ```sh
-$ watch -n 0.1 nvidia-smi
+ watch -n 0.1 nvidia-smi
 ```
 
 查看系统信息：
@@ -88,11 +88,11 @@ $ watch -n 0.1 nvidia-smi
 Install neofetch first:
 
 ```sh
-$ sudo apt install neofetch
+ sudo apt install neofetch
 ```
 
 ```sh
-$ neofetch
+ neofetch
 ```
 
 查看CPU、内存占用情况：
@@ -100,10 +100,10 @@ $ neofetch
 Install stop first:
 
 ```sh
-$ sudo apt install htop
+ sudo apt install htop
 ```
 
 ```sh
-$ htop
+ htop
 ```
 
