@@ -49,7 +49,7 @@ Vscode Remote SSH可以实现在服务器上写代码像在本地环境中写代
 
 ### 硬件配置
 
-- CPU：8核
+- CPU：4核
 - 内存：32GB
 - DISK：125GB
 - GPU：按需分配
