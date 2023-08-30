@@ -57,8 +57,8 @@ Vscode Remote SSH可以实现在服务器上写代码像在本地环境中写代
 ### 软件配置
 
 - ubuntu版本：18.04.01；
-- 显卡驱动版本：470.103.01；
-- CUDA版本：11.3；
+- 显卡驱动版本：525.116.04；
+- CUDA版本：11.3（提醒一下这个CUDA是全局的CUDA，是安装在`/usr/local`目录下的，事实上全局CUDA现在已经不是必须的了，因为现在`Python`环境中安装深度学习框架的时候安装脚本会在**当前环境下**安装对应版本的Local CUDA Toolkit，所以全局CUDA可以直接删除，具体怎么删除，请自行百度哈（其实就是用`rm`命令把`cuda`相关文件删了就行））；
 - cuDNN版本：无，可自行安装；
 - Anaconda 3 2021-05 with two environments:
   - `base`
