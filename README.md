@@ -30,7 +30,7 @@
 
 如果有校外登陆服务器的需求，可使用webvpn，也可自行用具有公网IP的服务器作为跳板机，配置`frp`[内网穿透服务](http://pluckytyx.top/2021/01/%E5%9C%A8%E5%AE%B6%E8%BF%9E%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97)。
 
-### SSH登陆图形化桌面
+### SSH登陆图形化桌面（不推荐，因为很卡）
 
 在校园网或者webvpn环境下，使用软件MobaXterm登陆虚拟机的图形化桌面。软件配置步骤如下：
 
@@ -39,7 +39,7 @@
 
 MobaXterm的功能很强大，可参考如下[使用教程](https://zhuanlan.zhihu.com/p/61013117)。
 
-### VScode Remote SSH
+### VScode Remote SSH（强烈推荐这样使用）
 
 Vscode Remote SSH可以实现在服务器上写代码像在本地环境中写代码一样舒适的体验，可参考此[教程](https://zhuanlan.zhihu.com/p/68577071)。
 
@@ -58,9 +58,15 @@ Vscode Remote SSH可以实现在服务器上写代码像在本地环境中写代
 
 - ubuntu版本：18.04.01；
 - 显卡驱动版本：525.116.04；
-- CUDA版本：11.3（提醒一下这个CUDA是全局的CUDA，是安装在`/usr/local`目录下的，事实上全局CUDA现在已经不是必须的了，因为现在`Python`环境中安装深度学习框架的时候安装脚本会在**当前环境下**安装对应版本的Local CUDA Toolkit，所以全局CUDA可以直接删除，具体怎么删除，请自行百度哈（其实就是用`rm`命令把`cuda`相关文件删了就行））；
+  - CUDA版本：11.3（提醒一下这个CUDA是全局的CUDA，是安装在`/usr/local`目录下的，事实上全局CUDA现在已经不是必须的了，因为现在`Python`环境中安装深度学习框架的时候安装脚本会在**当前环境下**安装对应版本的Local CUDA Toolkit，所以全局CUDA可以使用下面的命令直接删除（如果不删除的话使用诸如`JAX`等深度学习框架的最新版本时可能会出现问题）；
+
+
+```shell
+sudo rm -rf /usr/local/cuda*
+```
+
 - cuDNN版本：无，可自行安装；
-- Anaconda 3 2021-05 with two environments:
+- Anaconda 3 2021-05 ，预装了两个环境:
   - `base`
   - `deep_learning`
 - Pycharm 2021
